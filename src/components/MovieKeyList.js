@@ -1,26 +1,8 @@
 import React from 'react'
-
-const MovieKeyList = () => {
-    const movieLists = [
-        {
-            id: 1,
-            name: 'Sameer',
-        },
-        {
-            id: 2,
-            name: 'Shyam',
-        },
-        {
-            id: 3,
-            name: 'Sagar',
-        },
-        {
-            id: 4,
-            name: 'San,',
-        },
-    ];
-    // providing of key 
-    const movieList = movieLists.map((movie)=>{
+// props are short form of property. Genarally they are passed form parents to the child. Varialbles and functions both
+// can be passed as the components. 
+const MovieKeyList = (props) => {
+    const movieList = props.movieLists.map((movie)=>{
         return(
             <li key={movie.id}>{movie.name}</li>
         )});
